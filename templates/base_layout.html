@@ -1,0 +1,37 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="nav">
+        <nav>
+          <ul>
+            <li>
+                <a href="{% url 'home' %}"><img id="logo" src="{% static '1.jpeg' %}" alt="djangonautic"></a>
+            </li>
+            {% if user.is_authenticated %}
+              <li>
+                <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                  {% csrf_token %}
+                  <button type="sumbit">log out</button>
+                </form>
+              </li>
+              <li><a href="{% url 'articles:create' %}" class="highlight" style="color:#000">New Article</a></li>
+            {% else %}
+              <li><a href="{% url 'accounts:login' %}" style="color:#000">log in</a></li>
+              <li><a href="{% url 'accounts:signup' %}" style="color:#000">sign up</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

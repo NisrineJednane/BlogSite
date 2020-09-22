@@ -1,0 +1,17 @@
+<!-- warn django we're extending html code from global template-->
+{% extends 'base_layout.html' %}
+w
+{% block content %}
+  <h2 id="list-title"> </h2>
+  <div class='articles'>
+    {% for article in articles %}
+    <div class='article'>
+      <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a> </h2>
+      <p>{{ article.body|truncatechars:50 }}</p>
+      <p id="date">{{ article.date  }}</p>
+      <p class="author">added by {{ article.author.username }}</p>
+    </div>
+    {% endfor %}
+       <!--for python code that outputs data-->
+  </div>
+  {% endblock %}

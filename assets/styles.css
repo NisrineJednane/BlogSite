@@ -1,0 +1,171 @@
+body {
+  background-image: url(office.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #282829;
+  color: #fff;
+}
+
+body *{
+  font-family: Ubuntu;
+}
+
+#logo {
+  height: 50px;
+  width: 140px;
+  margin-left: 0;
+  margin-bottom: -50px;
+  margin-left: 500px;
+}
+
+#nav {
+  background-color: #fff;
+  margin-top: -35px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 100px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+h1, h2, h3, h4, h5{
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+}
+
+a, a:hover, a:visited{
+  color: #fff;
+  text-decoration: :none;
+  text-align: center;
+}
+
+p {
+  color: #fff;
+  text-align: center;
+}
+
+#date {
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+/*#list-title {
+  padding-bottom: 25px;
+}*/
+
+nav button {
+  border-radius: 37px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  17px 17px 34px #c2c2c2,
+             -17px -17px 34px #ffffff;
+  color: #000;
+  cursor: pointer;
+  border: 0;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.articles {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  grid-gap: 30px;
+  font-size: 15px;
+}
+
+.article {
+  margin-top: 95px;
+  /*padding: 10px;*/
+  border: 2px solid #fc6a03;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.article h2 {
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+.article a {
+  text-decoration: none;
+}
+
+.article .author {
+  background: #fc6a03;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  bottom: 0;
+  padding-top: 5px !important ;
+  color: #282829;
+}
+
+/*.article-detail .article {
+  padding: 0;
+}*/
+
+.article-detail .article img {
+  display: block;
+  margin: 0 auto;
+}
+
+.article-detail .article h2 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1.5em;
+}
+
+.article-detail .article p {
+  text-align: center;
+  padding: 10px;
+}
+
+.site-form {
+  margin-top: 60px;
+  border: 2px solid #fc6a03;
+  padding: 20px;
+}
+
+.site-form input, .site-form textarea {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+}
+
+a.highlight {
+  padding: 3px;
+  border: 1px solid #fc6a03;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.helptext, .helptext ul {
+  margin: 0 auto 20px;
+  color: #bbb;
+  font-size: 0.9em;
+  display: block;
+}
+
+.errorlist li {
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid #fc6a03;
+  color: #fc6a03;
+  margin: 10px 0;
+}
+
+.errorlist {
+  padding: 0;
+}
+
+.site-form input[type='submit'] {
+  background: #fc6a03;
+  border: 0;
+  color: #282829;
+  font-size: 1.2em;
+  border-radius: 4px;
+  margin: 10px 0;
+}
